@@ -1,13 +1,37 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  description: MyString
-  price: 9.99
-  course_id: 1
+  name: "Spaghetti & Meatballs"
+  description: "Angelhair pasta served with Meatballs tossed in tomato sauce"
+  price: 11.99
+  course: :one
 
 two:
-  name: MyString
-  description: MyString
+  name: "Nachos"
+  description: "Tortilla chips topped with lettuce, cheese, salsa, and jalapenos"
   price: 9.99
-  course_id: 1
+  course: :three
+
+three:
+  name: "Cheesecake"
+  description: "NY Style Cheesecake topped with your choice of strawberries or chocolate"
+  price: 6.50
+  course: :four
+
+four:
+  name: "Soda"
+  description: "Choice of Pepsi, Diet Pepsi, Sierra Mist. Free Refills."
+  price: 1.99
+  course: :fifth
+
+fifth:
+  name: "Merlot"
+  description: "House"
+  price: 6.99
+  course: :two
+
+sixth:
+  name: "Pinot noir"
+  description: "House"
+  price: 6.99
+  course: :two

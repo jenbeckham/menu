@@ -5,11 +5,13 @@ class DishesController < ApplicationController
   # GET /dishes.json
   def index
     @dishes = Dish.all
+    @course = Course.all
   end
 
   # GET /dishes/1
   # GET /dishes/1.json
   def show
+    redirect_to url_for(:action => :edit)
   end
 
   # GET /dishes/new

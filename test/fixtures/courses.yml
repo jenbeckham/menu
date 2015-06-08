@@ -1,9 +1,25 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  category: MyString
+  name: "Entrees"
 
 two:
-  name: MyString
-  category: MyString
+  name: "Wine"
+
+three:
+  name: "Appetizers"
+
+four:
+  name: "Desserts"
+
+fifth:
+  name: "Non-alcholic"
+
+sixth:
+  name: "Soups"
+
+seventh:
+  name: "Salads"
+
+eight:
+  name: "Beer"
