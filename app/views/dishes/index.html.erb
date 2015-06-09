@@ -17,10 +17,9 @@
     <tbody>
       <% course.dishes.each do |dish| %>
         <tr>
-          <td><%= dish.name%> </td>
+          <td><%= link_to "#{dish.name}", edit_dish_path(dish) %> </td>
           <td><%= dish.description %></td>
           <td><%= dish.price %></td>
-          <td><%= link_to 'Edit', edit_dish_path(dish) %></td>
           <td><%= link_to 'Delete', dish, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
