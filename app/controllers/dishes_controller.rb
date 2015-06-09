@@ -80,10 +80,11 @@ class DishesController < ApplicationController
       params.require(:dish).permit(:name, :description, :price, :course_id)
     end
 
-    def logged_in?
-      if User.find_by_id(session[:user_id])
-      else
-        redirect_to login_path, notice: 'You must login in'
-
-    end
+    # def logged_in?
+    #   if User.find_by_id(session[:user_id])
+    #   else
+    #     redirect_to login_path, notice: 'You must login in'
+    #   end
+    #
+    # end
 end
