@@ -2,9 +2,10 @@
 
   <h1> Current Menu Options</h1>
   <p></p>
-  <div><%= image_tag("/assets/images/desserts.png") %></div>
+
   <% @courses.each do |course| %>
-    <table class="table">
+  <th><%= image_tag asset_url("#{course.name}.jpg"), class: "picture" %></th>
+  <table class="table">
       <thead>
         <tr><p class="lead"><%= course.name %></p>
         </tr>
