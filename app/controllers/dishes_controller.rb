@@ -8,6 +8,9 @@ class DishesController < ApplicationController
   def index
     @dishes = Dish.all
     @courses = Course.all
+
+    #   <!-- <th><%= image_tag asset_url("#{course.name}.jpg"), class: "picture" %></th> -->
+    # code for html file
   end
 
   # GET /dishes/1

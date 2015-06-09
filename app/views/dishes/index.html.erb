@@ -4,7 +4,6 @@
   <p></p>
 
   <% @courses.each do |course| %>
-  <th><%= image_tag asset_url("#{course.name}.jpg"), class: "picture" %></th>
   <table class="table">
       <thead>
         <tr><p class="lead"><%= course.name %></p>
