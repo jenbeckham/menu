@@ -14,3 +14,43 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+$primary-color: #d7ccc8;
+$second-color: #795548;
+$text-color: #ffffff;
+
+
+
+.btn_btn-danger{
+  color: #000000
+  }
+
+
+.lead{
+  text-align: center;
+  font-size: 30px;
+  }
+
+
+h1{
+  color: #5d4037;
+  font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+  text-align: center;
+  padding: 15px;
+}
+
+body {
+  background-color: $primary-color;
+}
+
+th{
+  background-color: $second-color;
+  font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+  color: $text-color;
+  text-align: center;
+  font-size: 20px;
+}
+
+td{
+  text-align: center;
+}
