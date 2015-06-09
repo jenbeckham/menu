@@ -1,30 +1,30 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Current Menu Options</h1>
-<p>Appetizers</p>
-<table>
-  <thead>
-    <tr>
-      <th>Dish</th>
-      <th>Description</th>
-      <th>Price</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @dishes.each do |dish| %>
+<p></p>
+<% @courses.each do |course| %>
+  <table>
+    <thead>
+      <tr><%= course.name %></tr>
       <tr>
-        <td><%= dish.name %></td>
-        <td><%= dish.description %></td>
-        <td><%= dish.price %></td>
-        <td><%= link_to 'Edit', edit_dish_path(dish) %></td>
-        <td><%= link_to 'Destroy', dish, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Dish</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
-
-<%= link_to 'New Dish', new_dish_path %>
+    <tbody>
+      <% course.dishes.each do |dish| %>
+        <tr>
+          <td><%= dish.name%> </td>
+          <td><%= dish.description %></td>
+          <td><%= dish.price %></td>
+          <td><%= link_to 'Edit', edit_dish_path(dish) %></td>
+          <td><%= link_to 'Delete', dish, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <p> <%= link_to "New #{course.name}", new_dish_path(course_id: course.id) %> </p>
+<% end %>

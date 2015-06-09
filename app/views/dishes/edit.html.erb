@@ -2,4 +2,5 @@
 
 <%= render 'form' %>
 
+<%= link_to 'Delete', @dish, method: :delete, data: { confirm: 'Are you sure?' }%>
 <%= link_to 'Back', dishes_path %>
