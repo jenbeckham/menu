@@ -1,5 +1,10 @@
+$primary-color: #e8e88b;
+$link-color: #000;
+$click-color: #39A5ed;
+$error-color: red;
+
 body {
-  background-color: #fff;
+  background-color: $primary-color;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -19,13 +24,13 @@ pre {
 }
 
 a {
-  color: #000;
+  color: $link-color;
   &:visited {
-    color: #666;
+    color: $click-color;
   }
   &:hover {
     color: #fff;
-    background-color: #000;
+    background-color: $link-color;
   }
 }
 
@@ -41,13 +46,13 @@ div {
 
 .field_with_errors {
   padding: 2px;
-  background-color: red;
+  background-color: $error-color;
   display: table;
 }
 
 #error_explanation {
   width: 450px;
-  border: 2px solid red;
+  border: 2px solid $error-color;
   padding: 7px;
   padding-bottom: 0;
   margin-bottom: 20px;

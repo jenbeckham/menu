@@ -1,11 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Current Menu Options</h1>
+<h1> Current Menu Options</h1>
 <p></p>
 <% @courses.each do |course| %>
   <table>
     <thead>
-      <tr><%= course.name %></tr>
+      <tr><p class="text-left"><%= course.name %></p></tr>
       <tr>
         <th>Dish</th>
         <th>Description</th>
@@ -20,10 +20,10 @@
           <td><%= link_to "#{dish.name}", edit_dish_path(dish) %> </td>
           <td><%= dish.description %></td>
           <td><%= dish.price %></td>
-          <td><%= link_to 'Delete', dish, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><button type="button" class="btn btn-danger"><%= link_to 'Delete', dish, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
         </tr>
       <% end %>
     </tbody>
   </table>
-  <p> <%= link_to "New #{course.name}", new_dish_path(course_id: course.id) %> </p>
+  <button type="button"><%= link_to "New #{course.name}", new_dish_path(course_id: course.id) %> </button></p>
 <% end %>
