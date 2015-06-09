@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'session/login'
+
+  get 'session/logout'
+
+  resources :users
   resources :dishes
 
   root 'dishes#index'

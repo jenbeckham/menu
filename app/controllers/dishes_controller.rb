@@ -1,5 +1,7 @@
 class DishesController < ApplicationController
+  before_action :logged_in?
   before_action :set_dish, only: [:show, :edit, :update, :destroy]
+
 
   # GET /dishes
   # GET /dishes.json
@@ -73,5 +75,12 @@ class DishesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def dish_params
       params.require(:dish).permit(:name, :description, :price, :course_id)
+    end
+
+    def logged_in?
+      if User.find_by_id(session[:user_id])
+      else
+        redirect_to login_path, notice: 'You must login in'
+
     end
 end
